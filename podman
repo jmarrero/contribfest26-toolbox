@@ -1,0 +1,16 @@
+#!/bin/bash
+passthrough=(CONTAINER_CONNECTION)
+args=()
+
+for env in ${passthrough[@]}; do
+    if test -n "${!env}"; then
+        args+=("--env=${env}=${!env}")
+    fi
+done
+
+if test -n "${TOOLBOX_PATH:-}"; then
+    exec flatpak-spawn "${args[@]}" --host /usr/bin/podman "$@"
+else
+    exec /usr/bin/podman "$@"
+fi
+
