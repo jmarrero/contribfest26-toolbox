@@ -106,20 +106,11 @@ Inside the toolbox, Podman commands are transparently delegated to the host's Po
 
 ### Good First Issues
 
-These are labeled `good first issue` upstream and are a great place to start.
-
 | Issue | Type | Title | Notes |
 |---|---|---|---|
 | [bootc#1424](https://github.com/bootc-dev/bootc/issues/1424) | Rust | Start using GetRawBlob | Use the new `get_raw_blob` API from `containers-image-proxy` |
 | [bootc#475](https://github.com/bootc-dev/bootc/issues/475) | Rust | Add debug output option | Log exact external commands (sgdisk, systemd-cryptenroll, etc.) for debugging |
 | [bootc#192](https://github.com/bootc-dev/bootc/issues/192) | Rust | Verify target OS compatibility with `install-to-filesystem` | Sanity-check filesystem kernel module support before install |
-
-### Possible Good First Issues for Contribfest
-
-These are not necessarily labeled `good first issue` but are approachable for the contribfest.
-
-| Issue | Type | Title | Notes |
-|---|---|---|---|
 | [bootc#1276](https://github.com/bootc-dev/bootc/issues/1276) | Rust | Add explicit mechanism to remove rollback deployment | Equivalent of `rpm-ostree cleanup` for bootc |
 | [bootc#1891](https://github.com/bootc-dev/bootc/issues/1891) | CI | Gate on `update-generated` | Ensure `just update-generated` is a no-op in CI |
 | [bootc#1419](https://github.com/bootc-dev/bootc/issues/1419) | Testing | Add tests which cover `--apply` | Similar test coverage needed in the upstream repo |

@@ -5,6 +5,7 @@
 # Podman
 FROM registry.fedoraproject.org/fedora-toolbox:43
 COPY podman /usr/local/bin/
+# Build deps come from the bootc spec: https://github.com/bootc-dev/bootc/blob/main/contrib/packaging/bootc.spec
 RUN dnf builddep bootc -y && dnf install -y \
          # run local qemu vms
          libvirt-daemon-config-network libvirt-daemon-kvm qemu-kvm \
